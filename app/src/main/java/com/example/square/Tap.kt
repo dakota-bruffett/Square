@@ -22,20 +22,28 @@ class Tap : AppCompatActivity() {
         poke = findViewById(R.id.Poke)
         Contain = findViewById(R.id.Contain)
 
-        var pokeSize = intent.getIntExtra(EXTRA_SQUARE_SIZE, 100)
+        val pokeSize = intent.getIntExtra(EXTRA_SQUARE_SIZE, 100)
         if (pokeSize == 0){
-            pokeSize== 1
+            pokeSize == 1
         }
         poke.layoutParams.height = pokeSize
         poke.layoutParams.width = pokeSize
 
         poke.setOnClickListener {
-            pokeTouched(true)
+            SquareTouched(true)
 
         }
         Contain.setOnClickListener {
-            pokeTouched(false)
+            SquareTouched(false)
         }
+
+    }
+
+    private fun SquareTouched(Wasitpoked: Boolean) {
+        val ResultIntent = Intent()
+        ResultIntent.putExtra(EXTRA_TAPPED_INSIDE_SQUARE, Wasitpoked)
+        setResult(RESULT_OK, ResultIntent)
+        finish()
 
     }
 
