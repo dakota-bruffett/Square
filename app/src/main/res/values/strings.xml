@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Square</string>
     <string name="showsquare">ShowSquare</string>
+    <string name="tap">Show_me_the_Square</string>
+    <string name="Helloworld">Hello_touch_it</string>
+    <string name="instructions">Instructions</string>
+    <string name="todo">TODO</string>
+    <string name="touch">Touch</string>
+    <string name="touchit">TouchIt</string>
 </resources>
